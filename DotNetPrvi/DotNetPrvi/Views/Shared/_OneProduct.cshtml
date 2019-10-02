@@ -1,0 +1,33 @@
+﻿
+@model DotNetPrvi.Models.Proizvod
+
+@{
+    var tipBadge = "mt-n3 text-dark badge badge-" + Model.BojaBadge;
+    Console.WriteLine(tipBadge);
+    //var cena = Math.Round(Model.CijenaNova, 2);
+
+}
+
+
+
+
+
+    <figure >
+        <div style="border:solid 0.25pt #333834" class="container">
+            <span class="mt-n3 text-dark badge badge-danger" width="10">@Model.TekstBadge</span>
+            <div class="img-wrap">
+                <img style="display: block; margin-left: auto;
+  margin-right: auto;" height="200" width="180" src=@Model.PutanjaDoSlike>
+            </div>
+            <figcaption class=" text-center">
+                <br />
+                <h6>@Model.Naziv</h6>
+                <h4 class="text-light"><b>KM @Model.Cijena</b></h4>
+
+            </figcaption>
+            <button type="button" style="display: block; margin-left: auto;
+  margin-right: 5px;" class="btn btn-danger  ">
+                Buy
+            </button>
+        </div>
+    </figure>
