@@ -8,22 +8,14 @@ namespace DotNetPrvi.Models
     //static class kako bi mogla pristupiti odakle god bez kreiranja instance
     public  class ParentZaSve
     {
-        public  List<Korisnik> Korisnici { get; set; }
-        public   List<Narudzba> Narudzbe { get; set; }
-        public  List<Proizvod> Proizvodi { get; set; }
-        public   List<Korpa> Korpe { get; set; }
-        public  List<Wish> Wishes { get; set; }
+        public List<Korisnik> Korisnici { get; set; } = new List<Korisnik>();
+        public   List<Narudzba> Narudzbe { get; set; } = new List<Narudzba>();
+        public  List<Proizvod> Proizvodi { get; set; } = new List<Proizvod>();
+        public   List<Korpa> Korpe { get; set; } = new List<Korpa>();
+        public  List<Wish> Wishes { get; set; } = new List<Wish>();
 
-        
-        public ParentZaSve()
-        {
-            Korisnici = new List<Korisnik>();
-            Narudzbe = new List<Narudzba>();
-            Proizvodi = new List<Proizvod>();
-            Korpe = new List<Korpa>();
-            Wishes = new List<Wish>();
-        }
-        
+        //I recommend that you do this, this will reduce the amount of code, do the same in other models using the example, while leaving the default constructor implicitly.
+
     }
-    
+
 }
